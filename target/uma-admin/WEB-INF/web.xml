@@ -1,0 +1,59 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+          id="WebApp_ID" version="3.1">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>RegisterResource</servlet-name>
+        <servlet-class>org.servlet.controller.RegisterResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterResource</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetResource</servlet-name>
+        <servlet-class>org.servlet.controller.GetResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetResource</servlet-name>
+        <url-pattern>/get-resource</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteResource</servlet-name>
+        <servlet-class>org.servlet.controller.DeleteResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteResource</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateResource</servlet-name>
+        <servlet-class>org.servlet.controller.UpdateResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateResource</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AllResources</servlet-name>
+        <servlet-class>org.servlet.controller.GetAllResourcesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllResources</servlet-name>
+        <url-pattern>/all-resources</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
