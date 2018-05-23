@@ -1,8 +1,7 @@
-package org.servlet.model.Ptmodel;
+package org.servlet.model.ResourceModel.Ptmodel;
 
-
-        import java.io.Serializable;
-        import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by dewni on 5/16/18.

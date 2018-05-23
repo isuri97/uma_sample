@@ -27,17 +27,17 @@
             </h1>
             <p>
                 <%-- <label>Resource ID : </label> <input type="text" name="resource_id" id="resource_id">--%>
-                <label for="grant" class="rid">Grant Type :</label></p>
+                <label for="grant_type" >Grant Type :</label></p>
             <fieldset>
-                <input id="grant" name="grant" required="required" type="text" size="40"/>
+                <input id="grant_type" name="grant_type" required="required" type="text" size="40"/>
             </fieldset>
-            <label for="GrantType" class="rid">Grant Name:</label></p>
+            <label for="grantType" >Grant Name:</label></p>
             <fieldset>
-                <input id="GrantType" name="GrantType" required="required" type="text" size="40"/>
+                <input id="grantType" name="grantType" required="required" type="text" size="40"/>
             </fieldset>
-            <label for="pt" class="rid">Permission Ticket :</label></p>
+            <label for="permissionTicket" >Permission Ticket :</label></p>
             <fieldset>
-                <input id="pt" name="pt" required="required" type="text" size="40"/>
+                <input id="permissionTicket" name="permissionTicket" required="required" type="text" size="40"/>
             </fieldset>
             
             <fieldset>

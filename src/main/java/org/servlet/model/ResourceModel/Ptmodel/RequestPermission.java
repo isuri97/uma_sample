@@ -1,13 +1,10 @@
-package org.servlet.model.Ptmodel;
-
-/**
- * Created by isuri on 5/21/18.
- */
+package org.servlet.model.ResourceModel.Ptmodel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
+
 public class RequestPermission implements Serializable {
 
     private List<String> resource_scopes = new ArrayList<String>();

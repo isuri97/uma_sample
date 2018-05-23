@@ -1,8 +1,6 @@
-package org.servlet.model.Ptmodel;
+package org.servlet.model.ResourceModel.Ptmodel;
 
-/**
- * Created by isuri on 5/21/18.
- */
+
 public class PermissionTicketResponse {
 
     private String ticket;

@@ -32,8 +32,7 @@ public class TokenServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         TokenResponse tokenResponse = null;
         try {
-            //String code = tokenClient.getCode();
-            //System.out.println(code);
+
             tokenResponse = tokenClient.getToken(getTokenRequest(req));
             req.setAttribute("token", tokenResponse);
             RequestDispatcher dispatcher = req.getRequestDispatcher("grant/client-token.jsp");
@@ -46,12 +45,9 @@ public class TokenServlet extends HttpServlet {
     public Form getTokenRequest(HttpServletRequest httpServletRequest){
         Form tokenRequest = new Form();
         TokenRequest tokenRequest1 = new TokenRequest();
-        /*tokenRequest.param("code",httpServletRequest.getParameter("code"));*/
-       // tokenRequest1.getGrant_type();
-        tokenRequest.param("grant_type","uma_grant");
-        tokenRequest.param("grantType","urn:ietf:params:oauth:grant-type:uma-ticket");
-        tokenRequest.param("permissionTicket","dcd7bb82-e676-4694-87b0-6026ed0d5756");
-        /*tokenRequest.param("socpe","uma_protection");*/
+        tokenRequest.param("grant_type",httpServletRequest.getParameter("grant_type"));
+        tokenRequest.param("grantType",httpServletRequest.getParameter("grantType"));
+        tokenRequest.param("permissionTicket",httpServletRequest.getParameter("permissionTicket"));
         tokenRequest.param("redirect_uri","https://localhost/callback");
         return tokenRequest;
     }

@@ -1,6 +1,6 @@
 <%@ page import="org.servlet.model.ResourceModel.RegisterResource" %>
 <%@ page import="org.servlet.model.ResourceModel.GetResource" %>
-<%@ page import="org.servlet.model.ErrorResponse" %><%--
+<%@ page import="org.servlet.model.ResourceModel.ErrorMessage" %><%--
   Created by IntelliJ IDEA.
   User: isuri
   Date: 5/3/18
@@ -69,17 +69,13 @@
             </p>
             <p>Description: <%= getResource.getDescription()%>
             </p>
-            <% } %>
-    
-            <br>
-            <%
-                if (request.getAttribute("errorMessage") != null) {
-                    String registerResource = (String) request.getAttribute("errorMessage");
-            %>
-            <h4>Error in the request.</h4>
-            <div>error: <%= registerResource%></div>
-           <%-- <div>error_description: <%= registerResource.getErrorDescription()%></div>--%>
-            <% } %>
+             <% }else if(request.getAttribute("error") != null){
+            ErrorMessage error = (ErrorMessage) request.getAttribute("error");
+        %>
+            <h1>Error </h1>
+            <p>Code : <%=error.getCode()%></p>
+            <p>Description : <%=error.getDescription()%></p>
+            <%}%>
         </form>
     </div>
 </div>

@@ -10,6 +10,7 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 import org.jboss.resteasy.specimpl.MultivaluedMapImpl;
+import org.servlet.client.exception.ClientException;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
@@ -101,10 +102,10 @@ public class AbstractRestClient {
 
         Response response = createTarget(url).queryParams(parameters).request().get();
 
-//        if (!isSuccess(response)) {
-//
-//            throw new Exception("ERROR");
-//        }
+        if (!isSuccess(response)) {
+
+            throw new ClientException(response);
+        }
         return response;
     }
 
@@ -119,7 +120,7 @@ public class AbstractRestClient {
 
         Response response = createTarget(url).request().headers(headers).get();
         if (!isSuccess(response)) {
-            processException(response);
+            throw new ClientException(response);
         }
         return response;
     }

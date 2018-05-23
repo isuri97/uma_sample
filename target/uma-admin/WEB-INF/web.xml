@@ -54,6 +54,14 @@
         <url-pattern>/all-resources</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>RequestPermission</servlet-name>
+        <servlet-class>org.servlet.controller.PermissionRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestPermission</servlet-name>
+        <url-pattern>/permission</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

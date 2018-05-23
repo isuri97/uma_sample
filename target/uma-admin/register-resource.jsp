@@ -2,7 +2,7 @@
 <%@ page import="org.servlet.model.ResourceModel.SaveResourceResponse" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="org.servlet.model.ErrorResponse" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: isuri
   Date: 5/3/18

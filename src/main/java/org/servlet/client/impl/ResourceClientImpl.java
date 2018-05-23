@@ -2,7 +2,7 @@ package org.servlet.client.impl;
 
 import org.servlet.client.AbstractRestClient;
 import org.servlet.client.ResourceClient;
-import org.servlet.model.ErrorResponse;
+import org.servlet.client.exception.ClientException;
 import org.servlet.model.ResourceModel.GetResource;
 import org.servlet.model.ResourceModel.RegisterResource;
 import org.servlet.model.ResourceModel.SaveResourceResponse;
@@ -21,7 +21,7 @@ public class ResourceClientImpl extends AbstractRestClient implements ResourceCl
     //AbstractRestClient abstractRestClient;
     public static String message = null;
 
-    public static ErrorResponse errorResponse = null;
+    //public static ErrorResponse errorResponse = null;
 
     public ResourceClientImpl(String targetServiceUrl,MultivaluedMap<String, Object> headers) {
         super(targetServiceUrl,headers);
@@ -35,14 +35,8 @@ public class ResourceClientImpl extends AbstractRestClient implements ResourceCl
             response = super.get(this.targetServiceUrl + id);
             GetResource getResource= response.readEntity(GetResource.class);
             return getResource;
-        } catch (Exception e) {
-            /*errorResponse = new ErrorResponse();
-            String errorcode = errorResponse.getError();
-            String errorDescription = errorResponse.getErrorDescription();*/
-            message = "The exception raised due to" + e;
-            System.out.print(message);
-            e.printStackTrace();
-            throw new Exception(e);
+        } catch (ClientException e) {
+            throw e;
         } finally {
             close(response);
         }
