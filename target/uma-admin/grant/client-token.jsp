@@ -39,7 +39,10 @@
             <fieldset>
                 <input id="permissionTicket" name="permissionTicket" required="required" type="text" size="40"/>
             </fieldset>
-            
+            <label for="idtoken" >ID Token :</label></p>
+            <fieldset>
+                <input id="idtoken" name="idtoken" required="required" type="text" size="40"/>
+            </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" value="Register resource"> Get Token</button>
             </fieldset>

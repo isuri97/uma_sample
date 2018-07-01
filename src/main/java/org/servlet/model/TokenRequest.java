@@ -6,6 +6,7 @@ public class TokenRequest {
     private String code;
     private String scope;
     private String redirect_uri;
+    private String idtoken;
 
     private String grantType;
     private String permissionTicket;
@@ -60,5 +61,15 @@ public class TokenRequest {
     public void setPermissionTicket(String permissionTicket) {
 
         this.permissionTicket = permissionTicket;
+    }
+
+    public String getIdtoken() {
+
+        return idtoken;
+    }
+
+    public void setIdtoken(String idtoken) {
+
+        this.idtoken = idtoken;
     }
 }

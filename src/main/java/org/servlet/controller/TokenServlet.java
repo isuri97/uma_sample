@@ -1,5 +1,6 @@
 package org.servlet.controller;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.servlet.client.ResourceClient;
 import org.servlet.client.TokenClient;
 import org.servlet.client.core.ResourceClientProxyPool;
@@ -48,6 +49,7 @@ public class TokenServlet extends HttpServlet {
         tokenRequest.param("grant_type",httpServletRequest.getParameter("grant_type"));
         tokenRequest.param("grantType",httpServletRequest.getParameter("grantType"));
         tokenRequest.param("permissionTicket",httpServletRequest.getParameter("permissionTicket"));
+        tokenRequest.param("idtoken",httpServletRequest.getParameter("idtoken"));
         tokenRequest.param("redirect_uri","https://localhost/callback");
         return tokenRequest;
     }

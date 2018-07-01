@@ -55,7 +55,7 @@
 <h4>Error in the request.</h4>
 <div>Http status code: <%=PermissionClientImpl.httpStatusCode%></div>
 <div>error: <%= permissionTicketResponse.getError()%></div>
-<div>error_description: <%= permissionTicketResponse.getErrorDescription()%></div>
+<%--<div>error_description: <%= permissionTicketResponse.getErrorDescription()%></div>--%>
 <% } %>
 
         </form>

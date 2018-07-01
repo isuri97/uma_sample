@@ -41,7 +41,7 @@ public class ResourceClientProxyPool {
 
         if (resourceClient == null) {
             MultivaluedMap headers = new MultivaluedMapImpl();
-            headers.add("Authorization", "Bearer 7e2c5f1c-03af-3b2a-8dc4-b0f0665663ff");
+            headers.add("Authorization", "Bearer 8e4a431a-2777-3263-9a55-e46d45b7b90f");
             resourceClient = new ResourceClientImpl(targetBaseServiceURL, headers);
         }
         return resourceClient;
@@ -51,7 +51,7 @@ public class ResourceClientProxyPool {
 
         if (tokenClient == null) {
             MultivaluedMap headers = new MultivaluedMapImpl();
-            headers.add("Authorization", "Basic Rm5uN3FaMnVNczh1Umo1YnYwdzRmR1VMRFAwYTp5eWJuREpyY0hxb295SXpwa1l3S1RmX0w1VUVh");
+            headers.add("Authorization", "Basic Ulh4T2R0UVg3QXljb2hkdURKclRQdXAzZkw0YTpYMXdSbW42NlNFWUpQYTVqSVo1S0VqMGhFbVlh");
             tokenClient = new TokenClientImpl("https://localhost:9443/oauth2/", headers);
         }
         return tokenClient;
@@ -61,7 +61,7 @@ public class ResourceClientProxyPool {
 
         if (permissionClient == null) {
             MultivaluedMap headers = new MultivaluedMapImpl();
-            headers.add("Authorization", "Bearer 7e2c5f1c-03af-3b2a-8dc4-b0f0665663ff");
+            headers.add("Authorization", "Bearer 8e4a431a-2777-3263-9a55-e46d45b7b90f");
             permissionClient = new PermissionClientImpl("https://localhost:9443/api/identity/oauth2/uma/permission/v1.0/permission", headers);
         }
 

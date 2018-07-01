@@ -54,10 +54,9 @@ public class AbstractRestClient {
     }
     public Response post(final String url, final Entity<?> entity, MediaType applicationFormUrlencodedType, final BasicAuthentication basicAuthentication) throws Exception {
         Response response = createTarget(url).register(basicAuthentication).request().headers(headers).post(entity);
-        /*if (!isSuccess(response)) {
-
-            throw new Exception("ERROR");
-        }*/
+        if (!isSuccess(response)) {
+            processException(response);
+        }
         return response;
     }
 

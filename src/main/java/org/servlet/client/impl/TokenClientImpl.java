@@ -31,7 +31,7 @@ public class TokenClientImpl extends AbstractRestClient implements TokenClient {
         Response response = null;
         try {
             Entity<Form> entity = Entity.form(tokenRequest);
-            response = super.post(this.targetServiceUrl+ "token", entity,MediaType.APPLICATION_FORM_URLENCODED_TYPE,new BasicAuthentication("Fnn7qZ2uMs8uRj5bv0w4fGULDP0a","yybnDJrcHqooyIzpkYwKTf_L5UEa"));
+            response = super.post(this.targetServiceUrl+ "token", entity,MediaType.APPLICATION_FORM_URLENCODED_TYPE,new BasicAuthentication("RXxOdtQX7AycohduDJrTPup3fL4a","X1wRmn66SEYJPa5jIZ5KEj0hEmYa"));
             TokenResponse tokenResponse = response.readEntity(TokenResponse.class);
             return tokenResponse;
         } catch (Exception e) {
